@@ -71,16 +71,6 @@ jobs:
       dist: focal
       node_js: 14
 
-    # - name: macOS High Sierra (10.13) / NodeJS 10 / Python 2
-    #   os: osx
-    #   osx_image: xcode9.3
-    #   node_js: 10
-
-    # - name: macOS Catalina (10.15) / NodeJS 10 / Python 2
-    #   os: osx
-    #   osx_image: xcode12
-    #   node_js: 10
-
     - name: macOS Catalina (10.15) / NodeJS 10 / Python 3
       os: osx
       osx_image: xcode12
@@ -110,6 +100,7 @@ jobs:
 
 before_install:
   - python --version
+  - npm i -g node-gyp
 
 install:
   - yarn
